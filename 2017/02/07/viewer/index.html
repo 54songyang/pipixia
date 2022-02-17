@@ -1,0 +1,1456 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="viewer, js css vue">
+    <meta name="description" content="viewer">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>viewer | 个人博客</title>
+    <link rel="icon" type="image/png" href="/pipixia.github.io/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/pipixia.github.io/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/pipixia.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/pipixia.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/pipixia.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/pipixia.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/pipixia.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/pipixia.github.io/css/my.css">
+
+    <script src="/pipixia.github.io/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/pipixia.github.io/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/pipixia.github.io/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/pipixia.github.io/" class="waves-effect waves-light">
+                    
+                    <!-- <img src="/pipixia.github.io/medias/logo.png" class="logo-img" alt="LOGO"> -->
+                    
+                    <span class="logo-span">个人博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/pipixia.github.io/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/pipixia.github.io/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/pipixia.github.io/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/pipixia.github.io/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/pipixia.github.io/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/pipixia.github.io/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/pipixia.github.io/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/pipixia.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">个人博客</div>
+        <div class="logo-desc">
+            
+            皮皮虾的个人博客
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/pipixia.github.io/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/pipixia.github.io/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/pipixia.github.io/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/pipixia.github.io/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/pipixia.github.io/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/pipixia.github.io/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/pipixia.github.io/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/54songyang" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/54songyang" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/pipixia.github.io/medias/banner/1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">viewer</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/pipixia.github.io/tags/viewer-js/">
+                                <span class="chip bg-color">viewer.js</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/pipixia.github.io/categories/viewer/" class="post-category">
+                                viewer
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2017-02-07
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/pipixia.github.io/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="插件安装">插件安装</h3>
+<pre class="line-numbers language-none"><code class="language-none">npm install viewerjs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="插件引入">插件引入</h3>
+<pre class="line-numbers language-none"><code class="language-none">import Viewer from 'viewerjs';
+import 'viewerjs/dist/viewer.css';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="html部分">html部分</h3>
+<pre class="line-numbers language-none"><code class="language-none">&lt;img id="viewerDom" src = "xxx.png" alt=""&gt;
+或者
+&lt;ul id="viewerDom"&gt;
+  &lt;li v-for="item in imgList" :key="index"&gt;
+    &lt;img src = "item"&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+或者
+&lt;div id = "viewerDom"&gt;
+  &lt;img v-for="item in imgList" :src="item"&gt;
+&lt;/div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="调用插件">调用插件</h3>
+<pre class="line-numbers language-none"><code class="language-none">//具体需要哪些配置可参照下表
+const ViewerDom = document.querySelector('#viewerDom');
+   this.viewer = new Viewer(ViewerDom, {
+     initialViewIndex: 0,
+     button: true, //右上角关闭按钮
+     navbar: 2,
+     title: 0,
+     toolbar: 0,
+     keyboard: false,
+     ready: function (e) {
+      console.log(e.type);
+     },
+     show: function (e) {
+      console.log(e.type);
+     },
+     shown: function (e) {
+      console.log(e.type);
+     },
+     hide: function (e) {
+      console.log(e.type);
+     },
+     hidden: function (e) {
+      console.log(e.type);
+     },
+     view: function (e) {
+      console.log(e.type);
+     },
+     viewed: function (e) {
+      console.log(e.type);
+     },
+     zoom: function (e) {
+      console.log(e.type);
+     },
+     zoomed: function (e) {
+      console.log(e.type);
+     }
+  });<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="键盘事件">键盘事件</h3>
+<blockquote>
+<p>仅在modal mode下可用<br>
+ESC 键: 退出全屏/关闭/退出/停止播放;<br>
+Space 键: 停止/播放;<br>
+←键: 查看上一张图片;<br>
+→键: 查看下一张图片;<br>
+↑键: 放大图片;<br>
+↓键: 缩小图片;<br>
+Ctrl + 0 组合键: 缩小到初始大小;<br>
+Ctrl + 1 组合键: 放大到原始大小;</p>
+</blockquote>
+<h3 id="配置参数">配置参数</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名称</th>
+<th style="text-align:center">参数类型</th>
+<th style="text-align:center">默认值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">initialViewIndex</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">0</td>
+<td style="text-align:left">定义用于查看的图像的初始索引</td>
+</tr>
+<tr>
+<td style="text-align:center">inline</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">false</td>
+<td style="text-align:left">支持 inline mode</td>
+</tr>
+<tr>
+<td style="text-align:center">button</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否显示查看图片时右上角的关闭按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">navbar</td>
+<td style="text-align:center">Boolean / Number</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否显示底部导航栏  0 或者 false :不显示 <code>1 </code>或者 true :显示 <code>2</code> :当屏幕宽度大于768px时显示 <code>3</code> :当屏幕宽度大于992px时显示<code>4</code>:当屏幕宽度大于1200px时显示</td>
+</tr>
+<tr>
+<td style="text-align:center">title</td>
+<td style="text-align:center">Boolean / Number /Function / Array</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">0 或者 false 时不显示<code>1</code>或者true者function或者array时显示<code>2</code> :当屏幕宽度大于768px时显示<code> 3</code> :当屏幕宽度大于992px时显示 <code>4</code> :当屏幕宽度大于1200px时显示function 在函数体内返回标题array 第一个参数表示可见性(0-4) 第二个参数就是标题</td>
+</tr>
+<tr>
+<td style="text-align:center">toolbar</td>
+<td style="text-align:center">Boolean / Number / Object</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">标题栏是否显示和布局&nbsp;<code>0&nbsp;</code>或者&nbsp;<code>false</code>&nbsp;时不显示<code>1</code>或者<code>true</code>或者时显示<code>2&nbsp;</code>:当屏幕宽度大于768px时显示&nbsp;<code>3&nbsp;</code>:当屏幕宽度大于992px时显示&nbsp;<code>4&nbsp;</code>:当屏幕宽度大于1200px时显示&nbsp;<code>Object</code></td>
+</tr>
+<tr>
+<td style="text-align:center">tooltip</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">放大或缩小时显示的百分比的文字提示<code>true</code> : 显示 <code>false</code> : 不显示</td>
+</tr>
+<tr>
+<td style="text-align:center">movable</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否可以拖动图片</td>
+</tr>
+<tr>
+<td style="text-align:center">zoomable</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否可以缩放图片</td>
+</tr>
+<tr>
+<td style="text-align:center">rotatable</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否可以旋转图片</td>
+</tr>
+<tr>
+<td style="text-align:center">scalable</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否可以缩放图片</td>
+</tr>
+<tr>
+<td style="text-align:center">transition</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">为一些特殊元素启用CSS3转换。</td>
+</tr>
+<tr>
+<td style="text-align:center">fullscreen</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">允许全屏播放</td>
+</tr>
+<tr>
+<td style="text-align:center">keyboard</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">启用键盘支持</td>
+</tr>
+<tr>
+<td style="text-align:center">backdrop</td>
+<td style="text-align:center">Boolean / String</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">启用 modal 为false的时候不支持点击背景关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">loading</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">加载图片的时候的loading图标</td>
+</tr>
+<tr>
+<td style="text-align:center">loop</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否可以循环查看图片</td>
+</tr>
+<tr>
+<td style="text-align:center">interval</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">5000</td>
+<td style="text-align:left">定义图片查看器的最小的宽度</td>
+</tr>
+<tr>
+<td style="text-align:center">minWidth</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">200</td>
+<td style="text-align:left">定义图片查看器的最小的高度</td>
+</tr>
+<tr>
+<td style="text-align:center">minHeight</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">100</td>
+<td style="text-align:left">播放图片时 距离下一张图片的间隔时间</td>
+</tr>
+<tr>
+<td style="text-align:center">zoomRatio</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">0.1</td>
+<td style="text-align:left">利用鼠标滚轮缩放图片时的比例</td>
+</tr>
+<tr>
+<td style="text-align:center">minZoomRatio</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:left">缩小图片的最小比例</td>
+</tr>
+<tr>
+<td style="text-align:center">maxZoomRatio</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">100</td>
+<td style="text-align:left">放大图片的放大比例</td>
+</tr>
+<tr>
+<td style="text-align:center">zIndex</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">2015</td>
+<td style="text-align:left">定义查看器的CSS z-index值 modal 模式下</td>
+</tr>
+<tr>
+<td style="text-align:center">zIndexInline</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">0</td>
+<td style="text-align:left">定义查看器的CSS z-index值 inline 模式下</td>
+</tr>
+<tr>
+<td style="text-align:center">url</td>
+<td style="text-align:center">String / Function</td>
+<td style="text-align:center">src</td>
+<td style="text-align:left">原始图像URL如果是一个字符串，应该图像元素的属性之一如果是一个函数，应该返回一个有效的图像URL</td>
+</tr>
+<tr>
+<td style="text-align:center">container</td>
+<td style="text-align:center">Element / String</td>
+<td style="text-align:center">body</td>
+<td style="text-align:left">将查看器置于modal模式的容器 只有在 inline为 false的时候才可以使用</td>
+</tr>
+<tr>
+<td style="text-align:center">filter</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">过滤图像以便查看(如果图像是可见的，应该返回true)</td>
+</tr>
+<tr>
+<td style="text-align:center">toggleOnDblclick</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">当你放大或者缩小图片时 双击还原</td>
+</tr>
+<tr>
+<td style="text-align:center">ready</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当查看图片时被触发的函数 只会触发一次</td>
+</tr>
+<tr>
+<td style="text-align:center">show</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当查看图片时被触发的函数 每次查看都会触发</td>
+</tr>
+<tr>
+<td style="text-align:center">shown</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当查看图片时被触发的函数 每次查看都会触发 在show之后</td>
+</tr>
+<tr>
+<td style="text-align:center">hide</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当关闭图片查看器时被触发的函数 每次关闭都会触发</td>
+</tr>
+<tr>
+<td style="text-align:center">hidden</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当关闭图片查看器时被触发的函数 每次关闭都会触发 在hide之后</td>
+</tr>
+<tr>
+<td style="text-align:center">view</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当查看图片时被触发的函数 每次查看都会触发 在shown之后</td>
+</tr>
+<tr>
+<td style="text-align:center">viewed</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当查看图片时被触发的函数 每次查看都会触发 在view之后</td>
+</tr>
+<tr>
+<td style="text-align:center">zoom</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">在图片缩放时触发</td>
+</tr>
+<tr>
+<td style="text-align:center">zoomed</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">在图片缩放时触发 在 zoom之后</td>
+</tr>
+</tbody>
+</table>
+<h3 id="toolbar-Object详解">toolbar Object详解</h3>
+<blockquote>
+<p>key值列表: “zoomIn”, “zoomOut”, “oneToOne”, “reset”, “prev”, “play”, “next”, “rotateLeft”, “rotateRight”, “flipHorizontal”, “flipVertical”</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">key值名称</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">zoomIn</td>
+<td style="text-align:center">放大图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">zoomOut</td>
+<td style="text-align:center">缩小图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">reset</td>
+<td style="text-align:center">重置图片大小的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">prev</td>
+<td style="text-align:center">查看上一张图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">next</td>
+<td style="text-align:center">查看上一张图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">play</td>
+<td style="text-align:center">播放图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">rotateLeft</td>
+<td style="text-align:center">向左旋转图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">rotateRight</td>
+<td style="text-align:center">向右旋转图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">flipHorizontal</td>
+<td style="text-align:center">图片左右翻转的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">flipVertical</td>
+<td style="text-align:center">图片上下翻转的按钮</td>
+</tr>
+</tbody>
+</table>
+<p>{key:number|Boolean} 显示或者隐藏对应key的按钮 为Number的时候为可见性<br>
+{key: String } 自定义按钮的大小<br>
+{ key: Function } 自定义按钮点击的处理<br>
+{ key: { show: Boolean | Number, size: String, click: Function } 自定义按钮的每个属性<br>
+size的取值范围: small medium default large;</p>
+<h3 id="方法">方法</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">key值名称</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>show()</code></td>
+<td style="text-align:center">显示显示器</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>hide()</code></td>
+<td style="text-align:center">关闭显示器</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>view()</code></td>
+<td style="text-align:center">查看视频索引</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>prev()</code></td>
+<td style="text-align:center">指示当前是第一个时转向查看最后一个</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>next()</code></td>
+<td style="text-align:center">指示当前是最后一个时转向查看第一个</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>move(offsetX [，offsetY])</code></td>
+<td style="text-align:center"><code>offsetX</code>:水平滑动；<code>offsetY</code>(可选)：垂直滑动</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>moveTo(x,[, y])</code></td>
+<td style="text-align:center"><code>x</code>:图片left值;<code>y</code>:图片top值(可选),不填时默认为<code>x</code>的值;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>zoom(ratio[, hasTooltip])</code></td>
+<td style="text-align:center">radio:放大缩小比例;hasTooltip:显示工具提示(可选);</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>zoomTo（ratio [，hasTooltip]）</code></td>
+<td style="text-align:center">将图像缩放到绝对比例。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>rotate(degree)</code></td>
+<td style="text-align:center">使用相对度旋转图像。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>rotateTo(degree)</code></td>
+<td style="text-align:center">将图像旋转到绝对程度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>scale(scaleX[, scaleY])</code></td>
+<td style="text-align:center">缩放</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>scaleX(scaleX)</code></td>
+<td style="text-align:center">缩放图像的横坐标</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>scaleY(scaleY)</code></td>
+<td style="text-align:center">缩放图像的纵坐标</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>play([fullscreen])</code></td>
+<td style="text-align:center">指示请求是否全屏(可选)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>stop()</code></td>
+<td style="text-align:center">停止播放</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>full()</code></td>
+<td style="text-align:center">使用modal mode</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>exit()</code></td>
+<td style="text-align:center">退出modal mode</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>tooltip()</code></td>
+<td style="text-align:center">显示图像的当前比率和百分比</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>toggle()</code></td>
+<td style="text-align:center">在自然大小和初始大小之间切换图像大小</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>reset()</code></td>
+<td style="text-align:center">初始化图片</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>update()</code></td>
+<td style="text-align:center">更改（添加，删除或排序）源图像时更新查看器实例。如果动态加载图像（使用XMLHTTPRequest），则可以使用此方法将新图像添加到查看器实例。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>destroy()</code></td>
+<td style="text-align:center">销毁查看器并删除实例</td>
+</tr>
+</tbody>
+</table>
+<h3 id="event">event</h3>
+<pre class="line-numbers language-none"><code class="language-none">let viewer;
+
+image.addEventListener('viewed', function () {
+  console.log(this.viewer === viewer);
+  // &gt; true
+});
+
+viewer = new Viewer(image);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>ready、show、shown、hide、hidden、view、viewed、zoom、zoomed</p>
+</blockquote>
+<h3 id="插件官方git地址"><a target="_blank" rel="noopener" href="https://github.com/fengyuanchen/viewerjs/blob/master/README.md">插件官方git地址</a></h3>
+<h3 id="插件demo地址"><a target="_blank" rel="noopener" href="http://fengyuanchen.github.io/viewerjs/">插件demo地址</a></h3>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/pipixia.github.io/about" rel="external nofollow noreferrer">皮皮虾</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://54songyang.github.io/pipixia.github.io/pipixia.github.io/2017/02/07/viewer/">https://54songyang.github.io/pipixia.github.io/pipixia.github.io/2017/02/07/viewer/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/pipixia.github.io/about" target="_blank">皮皮虾</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+        //复制后显示转载声明
+    //   document.addEventListener("copy", function (e) {
+    //     let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+    //     M.toast({html: toastHTML})
+    //   });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/pipixia.github.io/tags/viewer-js/">
+                                    <span class="chip bg-color">viewer.js</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/pipixia.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/pipixia.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/pipixia.github.io/2017/02/07/interview/">
+                    <div class="card-image">
+                        
+                        <img src="/pipixia.github.io/medias/banner/3.jpg" class="responsive-img" alt="前端面试题">
+                        
+                        <span class="card-title">前端面试题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前端面试题
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2017-02-07
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/pipixia.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
+                                    前端面试题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/pipixia.github.io/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">前端面试题</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/pipixia.github.io/2017/02/07/vscode/">
+                    <div class="card-image">
+                        
+                        <img src="/pipixia.github.io/medias/banner/2.jpg" class="responsive-img" alt="Vscode插件分享">
+                        
+                        <span class="card-title">Vscode插件分享</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Vscode插件分享
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2017-02-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/pipixia.github.io/categories/Vscode/" class="post-category">
+                                    Vscode
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/pipixia.github.io/tags/Vscode/">
+                        <span class="chip bg-color">Vscode</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/pipixia.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/pipixia.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/pipixia.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/pipixia.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer" style="background:none">
+    
+        <link rel="stylesheet" href="/pipixia.github.io/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/pipixia.github.io/libs/aplayer/APlayer.min.js"></script>
+<script src="/pipixia.github.io/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="copy-right">
+            
+                <span id="year">2016-2022</span>
+            
+            <a href="/pipixia.github.io/about" target="_blank">皮皮虾</a>
+            ，快乐每一天
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <!-- <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/54songyang" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:813372789@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=813372789" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 813372789" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/pipixia.github.io/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div> -->
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/pipixia.github.io/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<!-- <div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div> -->
+
+<section id="rightside" style="opacity: 1; transform: translateX(-38px);">
+    <!-- <div id="rightside-config-hide">
+        <button id="translateLink" type="button" title="简繁转换">简</button>
+        <button id="darkmode" type="button" title="淺色和深色模式轉換">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </div> -->
+    <div id="rightside-config-show">
+        <!-- <button id="rightside_config" type="button" title="設置" style="margin: 0;
+        padding: 0;
+        outline: 0;
+        border: none;">
+            <i class="fas fa-cog"></i>
+        </button> -->
+        <button id="go-up" type="button" title="回到頂部" style="margin: 0;
+            padding: 0;
+            outline: 0;
+            border: none;">
+            <i class="fas fa-arrow-up" style="padding:8px"></i>
+            <img style="max-width: 234%;
+                transform: translate(-80px,-70px);"
+                src="https://cdn.jsdelivr.net/gh/fudalijunyi/picture-bed/img/20200629182853.gif" title="回到頂部"
+                data-ll-status="loaded" class="loaded" />
+        </button>
+    </div>
+</section>
+
+    <script src="/pipixia.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="/pipixia.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/pipixia.github.io/libs/aos/aos.js"></script>
+    <script src="/pipixia.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/pipixia.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/pipixia.github.io/js/matery.js"></script>
+
+    
+
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/pipixia.github.io/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/pipixia.github.io/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/pipixia.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/pipixia.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/pipixia.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/pipixia.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/pipixia.github.io/live2dw/assets/live2d-widget-model-z16/assets/z16.model.json"},"display":{"position":"right","width":200,"height":300,"hOffset":30,"vOffset":0},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+</html>

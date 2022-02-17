@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>前端面试题</title>
+    <url>/pipixia.github.io/2017/02/07/interview/</url>
+    <content><![CDATA[<h2 id="圣杯布局、双飞翼布局">圣杯布局、双飞翼布局</h2>
+<h2 id="line-height-如何继承">line-height 如何继承</h2>
+<ul>
+<li>写具体数值，如30px,则继承该值；</li>
+<li>写比例，如2/15，则继承该比例；</li>
+<li>写百分比，如200%，则继承计算出来的值（考点）</li>
+</ul>
+<h2 id="响应式布局">响应式布局</h2>
+<ul>
+<li><strong>rem</strong>是什么
+<ul>
+<li>弊端 阶梯性</li>
+</ul>
+</li>
+<li><strong>vh</strong>、<strong>vw</strong></li>
+</ul>
+<h2 id="网页的视口尺寸">网页的视口尺寸</h2>
+<blockquote>
+<p>window.screen.height // 屏幕高度<br>
+window.innerHeight // 网页视口高度<br>
+document.body.clientHeight // body 高度</p>
+</blockquote>
+<p>vh 网页视口高度的 1/100<br>
+vw 网页视口高度的 1/100<br>
+vmax 取两者的最大值，vmin取两者的最小值</p>
+<h2 id="盒模型宽度计算">盒模型宽度计算</h2>
+<ul>
+<li>offsetWidth = (内容宽度 + 内边距 + 边框)，无外边框</li>
+<li>box-sizing:border-box</li>
+</ul>
+<h2 id="margin纵向重叠的问题">margin纵向重叠的问题</h2>
+<ul>
+<li>相邻元素的margin-top和margin-bottom会发生重叠</li>
+<li>空白内容的<code>&lt;p&gt;&lt;/p&gt;</code>也会重叠</li>
+</ul>
+<h2 id="margin负值问题">margin负值问题</h2>
+<ul>
+<li>margin-top、margin-left 负值，元素向上、向左移动</li>
+<li>margin-right负值，右侧元素左移，自身不受影响</li>
+<li>margin-bottom负值，下方元素上移，自身不受影响</li>
+</ul>
+<h2 id="BFC理解和应用">BFC理解和应用</h2>
+<ul>
+<li>一块独立渲染区域，内部元素的渲染不会影响边界以外的元素</li>
+<li>形成BFC的条件</li>
+<li>BFC的常见应用，清除浮动</li>
+</ul>
+<h2 id="float布局">float布局</h2>
+<ul>
+<li>圣杯布局和双飞翼布局的技术总结
+<ul>
+<li>使用float布局</li>
+<li>两侧使用margin负值，以便和中间内容横向重叠</li>
+<li>防止中间内容被两侧覆盖，一个用padding 一个用margin</li>
+</ul>
+</li>
+<li>手写clear fix<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.clearfix:after</span><span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token property">dispaly</span><span class="token punctuation">:</span>table<span class="token punctuation">;</span>
+  <span class="token property">clear</span><span class="token punctuation">:</span>both<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.clearfix</span><span class="token punctuation">{</span>
+  *<span class="token property">zoom</span><span class="token punctuation">:</span>1<span class="token punctuation">;</span> <span class="token comment">/* 兼容IE低版本 */</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h2 id="flex布局">flex布局</h2>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* flex 画三个点的🎲 */</span>
+<span class="token selector">.box</span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span>flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span>space-between<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item</span><span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+<span class="token selector">.item:nth-child(2)</span><span class="token punctuation">{</span>
+  <span class="token property">align-self</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item:nth-child(3)</span><span class="token punctuation">{</span>
+  <span class="token property">align-self</span><span class="token punctuation">:</span>flex-end<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="absolute和relative定位">absolute和relative定位</h2>
+<ul>
+<li>relative 依据自身定位</li>
+<li>absolute 依据最近一层的定位元素定位</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端面试题</category>
+      </categories>
+      <tags>
+        <tag>前端面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>viewer</title>
+    <url>/pipixia.github.io/2017/02/07/viewer/</url>
+    <content><![CDATA[<h3 id="插件安装">插件安装</h3>
+<pre class="line-numbers language-none"><code class="language-none">npm install viewerjs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="插件引入">插件引入</h3>
+<pre class="line-numbers language-none"><code class="language-none">import Viewer from 'viewerjs';
+import 'viewerjs/dist/viewer.css';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="html部分">html部分</h3>
+<pre class="line-numbers language-none"><code class="language-none">&lt;img id="viewerDom" src = "xxx.png" alt=""&gt;
+或者
+&lt;ul id="viewerDom"&gt;
+  &lt;li v-for="item in imgList" :key="index"&gt;
+    &lt;img src = "item"&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+或者
+&lt;div id = "viewerDom"&gt;
+  &lt;img v-for="item in imgList" :src="item"&gt;
+&lt;/div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="调用插件">调用插件</h3>
+<pre class="line-numbers language-none"><code class="language-none">//具体需要哪些配置可参照下表
+const ViewerDom = document.querySelector('#viewerDom');
+   this.viewer = new Viewer(ViewerDom, {
+     initialViewIndex: 0,
+     button: true, //右上角关闭按钮
+     navbar: 2,
+     title: 0,
+     toolbar: 0,
+     keyboard: false,
+     ready: function (e) {
+      console.log(e.type);
+     },
+     show: function (e) {
+      console.log(e.type);
+     },
+     shown: function (e) {
+      console.log(e.type);
+     },
+     hide: function (e) {
+      console.log(e.type);
+     },
+     hidden: function (e) {
+      console.log(e.type);
+     },
+     view: function (e) {
+      console.log(e.type);
+     },
+     viewed: function (e) {
+      console.log(e.type);
+     },
+     zoom: function (e) {
+      console.log(e.type);
+     },
+     zoomed: function (e) {
+      console.log(e.type);
+     }
+  });<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="键盘事件">键盘事件</h3>
+<blockquote>
+<p>仅在modal mode下可用<br>
+ESC 键: 退出全屏/关闭/退出/停止播放;<br>
+Space 键: 停止/播放;<br>
+←键: 查看上一张图片;<br>
+→键: 查看下一张图片;<br>
+↑键: 放大图片;<br>
+↓键: 缩小图片;<br>
+Ctrl + 0 组合键: 缩小到初始大小;<br>
+Ctrl + 1 组合键: 放大到原始大小;</p>
+</blockquote>
+<h3 id="配置参数">配置参数</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名称</th>
+<th style="text-align:center">参数类型</th>
+<th style="text-align:center">默认值</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">initialViewIndex</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">0</td>
+<td style="text-align:left">定义用于查看的图像的初始索引</td>
+</tr>
+<tr>
+<td style="text-align:center">inline</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">false</td>
+<td style="text-align:left">支持 inline mode</td>
+</tr>
+<tr>
+<td style="text-align:center">button</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否显示查看图片时右上角的关闭按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">navbar</td>
+<td style="text-align:center">Boolean / Number</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否显示底部导航栏  0 或者 false :不显示 <code>1 </code>或者 true :显示 <code>2</code> :当屏幕宽度大于768px时显示 <code>3</code> :当屏幕宽度大于992px时显示<code>4</code>:当屏幕宽度大于1200px时显示</td>
+</tr>
+<tr>
+<td style="text-align:center">title</td>
+<td style="text-align:center">Boolean / Number /Function / Array</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">0 或者 false 时不显示<code>1</code>或者true者function或者array时显示<code>2</code> :当屏幕宽度大于768px时显示<code> 3</code> :当屏幕宽度大于992px时显示 <code>4</code> :当屏幕宽度大于1200px时显示function 在函数体内返回标题array 第一个参数表示可见性(0-4) 第二个参数就是标题</td>
+</tr>
+<tr>
+<td style="text-align:center">toolbar</td>
+<td style="text-align:center">Boolean / Number / Object</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">标题栏是否显示和布局&nbsp;<code>0&nbsp;</code>或者&nbsp;<code>false</code>&nbsp;时不显示<code>1</code>或者<code>true</code>或者时显示<code>2&nbsp;</code>:当屏幕宽度大于768px时显示&nbsp;<code>3&nbsp;</code>:当屏幕宽度大于992px时显示&nbsp;<code>4&nbsp;</code>:当屏幕宽度大于1200px时显示&nbsp;<code>Object</code></td>
+</tr>
+<tr>
+<td style="text-align:center">tooltip</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">放大或缩小时显示的百分比的文字提示<code>true</code> : 显示 <code>false</code> : 不显示</td>
+</tr>
+<tr>
+<td style="text-align:center">movable</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否可以拖动图片</td>
+</tr>
+<tr>
+<td style="text-align:center">zoomable</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否可以缩放图片</td>
+</tr>
+<tr>
+<td style="text-align:center">rotatable</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否可以旋转图片</td>
+</tr>
+<tr>
+<td style="text-align:center">scalable</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否可以缩放图片</td>
+</tr>
+<tr>
+<td style="text-align:center">transition</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">为一些特殊元素启用CSS3转换。</td>
+</tr>
+<tr>
+<td style="text-align:center">fullscreen</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">允许全屏播放</td>
+</tr>
+<tr>
+<td style="text-align:center">keyboard</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">启用键盘支持</td>
+</tr>
+<tr>
+<td style="text-align:center">backdrop</td>
+<td style="text-align:center">Boolean / String</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">启用 modal 为false的时候不支持点击背景关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">loading</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">加载图片的时候的loading图标</td>
+</tr>
+<tr>
+<td style="text-align:center">loop</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">是否可以循环查看图片</td>
+</tr>
+<tr>
+<td style="text-align:center">interval</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">5000</td>
+<td style="text-align:left">定义图片查看器的最小的宽度</td>
+</tr>
+<tr>
+<td style="text-align:center">minWidth</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">200</td>
+<td style="text-align:left">定义图片查看器的最小的高度</td>
+</tr>
+<tr>
+<td style="text-align:center">minHeight</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">100</td>
+<td style="text-align:left">播放图片时 距离下一张图片的间隔时间</td>
+</tr>
+<tr>
+<td style="text-align:center">zoomRatio</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">0.1</td>
+<td style="text-align:left">利用鼠标滚轮缩放图片时的比例</td>
+</tr>
+<tr>
+<td style="text-align:center">minZoomRatio</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:left">缩小图片的最小比例</td>
+</tr>
+<tr>
+<td style="text-align:center">maxZoomRatio</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">100</td>
+<td style="text-align:left">放大图片的放大比例</td>
+</tr>
+<tr>
+<td style="text-align:center">zIndex</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">2015</td>
+<td style="text-align:left">定义查看器的CSS z-index值 modal 模式下</td>
+</tr>
+<tr>
+<td style="text-align:center">zIndexInline</td>
+<td style="text-align:center">Number</td>
+<td style="text-align:center">0</td>
+<td style="text-align:left">定义查看器的CSS z-index值 inline 模式下</td>
+</tr>
+<tr>
+<td style="text-align:center">url</td>
+<td style="text-align:center">String / Function</td>
+<td style="text-align:center">src</td>
+<td style="text-align:left">原始图像URL如果是一个字符串，应该图像元素的属性之一如果是一个函数，应该返回一个有效的图像URL</td>
+</tr>
+<tr>
+<td style="text-align:center">container</td>
+<td style="text-align:center">Element / String</td>
+<td style="text-align:center">body</td>
+<td style="text-align:left">将查看器置于modal模式的容器 只有在 inline为 false的时候才可以使用</td>
+</tr>
+<tr>
+<td style="text-align:center">filter</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">过滤图像以便查看(如果图像是可见的，应该返回true)</td>
+</tr>
+<tr>
+<td style="text-align:center">toggleOnDblclick</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">true</td>
+<td style="text-align:left">当你放大或者缩小图片时 双击还原</td>
+</tr>
+<tr>
+<td style="text-align:center">ready</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当查看图片时被触发的函数 只会触发一次</td>
+</tr>
+<tr>
+<td style="text-align:center">show</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当查看图片时被触发的函数 每次查看都会触发</td>
+</tr>
+<tr>
+<td style="text-align:center">shown</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当查看图片时被触发的函数 每次查看都会触发 在show之后</td>
+</tr>
+<tr>
+<td style="text-align:center">hide</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当关闭图片查看器时被触发的函数 每次关闭都会触发</td>
+</tr>
+<tr>
+<td style="text-align:center">hidden</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当关闭图片查看器时被触发的函数 每次关闭都会触发 在hide之后</td>
+</tr>
+<tr>
+<td style="text-align:center">view</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当查看图片时被触发的函数 每次查看都会触发 在shown之后</td>
+</tr>
+<tr>
+<td style="text-align:center">viewed</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">当查看图片时被触发的函数 每次查看都会触发 在view之后</td>
+</tr>
+<tr>
+<td style="text-align:center">zoom</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">在图片缩放时触发</td>
+</tr>
+<tr>
+<td style="text-align:center">zoomed</td>
+<td style="text-align:center">Function</td>
+<td style="text-align:center">null</td>
+<td style="text-align:left">在图片缩放时触发 在 zoom之后</td>
+</tr>
+</tbody>
+</table>
+<h3 id="toolbar-Object详解">toolbar Object详解</h3>
+<blockquote>
+<p>key值列表: “zoomIn”, “zoomOut”, “oneToOne”, “reset”, “prev”, “play”, “next”, “rotateLeft”, “rotateRight”, “flipHorizontal”, “flipVertical”</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">key值名称</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">zoomIn</td>
+<td style="text-align:center">放大图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">zoomOut</td>
+<td style="text-align:center">缩小图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">reset</td>
+<td style="text-align:center">重置图片大小的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">prev</td>
+<td style="text-align:center">查看上一张图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">next</td>
+<td style="text-align:center">查看上一张图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">play</td>
+<td style="text-align:center">播放图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">rotateLeft</td>
+<td style="text-align:center">向左旋转图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">rotateRight</td>
+<td style="text-align:center">向右旋转图片的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">flipHorizontal</td>
+<td style="text-align:center">图片左右翻转的按钮</td>
+</tr>
+<tr>
+<td style="text-align:center">flipVertical</td>
+<td style="text-align:center">图片上下翻转的按钮</td>
+</tr>
+</tbody>
+</table>
+<p>{key:number|Boolean} 显示或者隐藏对应key的按钮 为Number的时候为可见性<br>
+{key: String } 自定义按钮的大小<br>
+{ key: Function } 自定义按钮点击的处理<br>
+{ key: { show: Boolean | Number, size: String, click: Function } 自定义按钮的每个属性<br>
+size的取值范围: small medium default large;</p>
+<h3 id="方法">方法</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">key值名称</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>show()</code></td>
+<td style="text-align:center">显示显示器</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>hide()</code></td>
+<td style="text-align:center">关闭显示器</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>view()</code></td>
+<td style="text-align:center">查看视频索引</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>prev()</code></td>
+<td style="text-align:center">指示当前是第一个时转向查看最后一个</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>next()</code></td>
+<td style="text-align:center">指示当前是最后一个时转向查看第一个</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>move(offsetX [，offsetY])</code></td>
+<td style="text-align:center"><code>offsetX</code>:水平滑动；<code>offsetY</code>(可选)：垂直滑动</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>moveTo(x,[, y])</code></td>
+<td style="text-align:center"><code>x</code>:图片left值;<code>y</code>:图片top值(可选),不填时默认为<code>x</code>的值;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>zoom(ratio[, hasTooltip])</code></td>
+<td style="text-align:center">radio:放大缩小比例;hasTooltip:显示工具提示(可选);</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>zoomTo（ratio [，hasTooltip]）</code></td>
+<td style="text-align:center">将图像缩放到绝对比例。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>rotate(degree)</code></td>
+<td style="text-align:center">使用相对度旋转图像。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>rotateTo(degree)</code></td>
+<td style="text-align:center">将图像旋转到绝对程度</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>scale(scaleX[, scaleY])</code></td>
+<td style="text-align:center">缩放</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>scaleX(scaleX)</code></td>
+<td style="text-align:center">缩放图像的横坐标</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>scaleY(scaleY)</code></td>
+<td style="text-align:center">缩放图像的纵坐标</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>play([fullscreen])</code></td>
+<td style="text-align:center">指示请求是否全屏(可选)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>stop()</code></td>
+<td style="text-align:center">停止播放</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>full()</code></td>
+<td style="text-align:center">使用modal mode</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>exit()</code></td>
+<td style="text-align:center">退出modal mode</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>tooltip()</code></td>
+<td style="text-align:center">显示图像的当前比率和百分比</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>toggle()</code></td>
+<td style="text-align:center">在自然大小和初始大小之间切换图像大小</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>reset()</code></td>
+<td style="text-align:center">初始化图片</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>update()</code></td>
+<td style="text-align:center">更改（添加，删除或排序）源图像时更新查看器实例。如果动态加载图像（使用XMLHTTPRequest），则可以使用此方法将新图像添加到查看器实例。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>destroy()</code></td>
+<td style="text-align:center">销毁查看器并删除实例</td>
+</tr>
+</tbody>
+</table>
+<h3 id="event">event</h3>
+<pre class="line-numbers language-none"><code class="language-none">let viewer;
+
+image.addEventListener('viewed', function () {
+  console.log(this.viewer === viewer);
+  // &gt; true
+});
+
+viewer = new Viewer(image);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>ready、show、shown、hide、hidden、view、viewed、zoom、zoomed</p>
+</blockquote>
+<h3 id="插件官方git地址"><a href="https://github.com/fengyuanchen/viewerjs/blob/master/README.md">插件官方git地址</a></h3>
+<h3 id="插件demo地址"><a href="http://fengyuanchen.github.io/viewerjs/">插件demo地址</a></h3>
+]]></content>
+      <categories>
+        <category>viewer</category>
+      </categories>
+      <tags>
+        <tag>viewer.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vscode插件分享</title>
+    <url>/pipixia.github.io/2017/02/07/vscode/</url>
+    <content><![CDATA[<h1>1.<a href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments">Better Comments</a></h1>
+<blockquote>
+<p>编写更加人性化的注释</p>
+</blockquote>
+<h1>2.<a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer">Bracket Pair Colorizer</a></h1>
+<blockquote>
+<p>改变代码中的括号颜色,一层括号一个颜色，点击一个括号，会用实线将本身和另一半括号链接，便于区分。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16080040-12dda6b47488e52b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Bracket Pair Colorizer.jpg"></p>
+<h1>3.<a href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans">Chinese (Simplified) Language Pack for Visual Studio Code</a></h1>
+<blockquote>
+<p>Visual Studio Code汉化</p>
+</blockquote>
+<h1>4.<a href="https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek">CSS Peek</a></h1>
+<blockquote>
+<p>使用此插件，你可以追踪至样式表中 CSS 类和 ids 定义的地方。当你在 HTML 文件中右键单击选择器时，选择“ Go to Definition 和 Peek definition ”选项，它便会给你发送样式设置的 CSS 代码。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16080040-12f1b0bb76f731b4.gif?imageMogr2/auto-orient/strip" alt="css peek.gif"></p>
+<h1>5.<a href="https://marketplace.visualstudio.com/items?itemName=cipchk.cssrem">cssrem</a></h1>
+<blockquote>
+<p>css转rem插件，很方便，特别针对常写移动端适应布局。</p>
+</blockquote>
+<h1>6.<a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens — Git supercharged</a></h1>
+<blockquote>
+<p>git插件，不多说了。</p>
+</blockquote>
+<h1>7.<a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">HTML CSS Support</a></h1>
+<blockquote>
+<p>css提示，支持vue</p>
+</blockquote>
+<h1>8.<a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">Import Cost</a></h1>
+<blockquote>
+<p>显示引入包的文件大小。</p>
+</blockquote>
+<h1>9.<a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a></h1>
+<blockquote>
+<p>启动本地服务，必备</p>
+</blockquote>
+<h1>10.<a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">Path Intellisense</a></h1>
+<blockquote>
+<p>路径提示</p>
+</blockquote>
+<h1>11.<a href="https://marketplace.visualstudio.com/items?itemName=albert.TabOut">TabOut</a></h1>
+<blockquote>
+<p>tab键跳出括号，很实用</p>
+</blockquote>
+<h1>12.<a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur">Vetur</a></h1>
+<blockquote>
+<p>目前比较好的Vue语法高亮，vue项目必备插件</p>
+</blockquote>
+<h1>13.<a href="https://marketplace.visualstudio.com/items?itemName=mikey.vscode-fileheader">vscode-fileheader</a></h1>
+<blockquote>
+<p>添加作者详情插件。自动更新最后修改时间，最后修改人。配置后<br>
+<code>control+option+i</code>添加，适合多人开发的项目。</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">//用户配置
+"fileheader.Author": "author",
+"fileheader.LastModifiedBy": "author"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1>14.<a href="https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons">vscode-icons</a></h1>
+<blockquote>
+<p>文件图标美化。</p>
+</blockquote>
+<h1>15.<a href="https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap">htmltagwrap</a></h1>
+<blockquote>
+<p>html代码填充</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16080040-a152811435bb1a65.gif?imageMogr2/auto-orient/strip" alt="htmltagwrap.gif"></p>
+<h1>16.<a href="https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview">Image Preview</a></h1>
+<blockquote>
+<p>代码中选中图片路径即可预览图像</p>
+</blockquote>
+<h1>17.<a href="https://marketplace.visualstudio.com/items?itemName=gencer.html-slim-scss-css-class-completion">IntelliSense for CSS, SCSS class names in HTML, Slim and SCSS</a></h1>
+<blockquote>
+<p>把项目中 css 文件里的名称智能提示在 html 中</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16080040-46b02f45e981b3ec.gif?imageMogr2/auto-orient/strip" alt="IntelliSense for CSS, SCSS class names in HTML, Slim and SCSS.gif"></p>
+<h1>18.<a href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments">Better Comments</a></h1>
+<blockquote>
+<p>多色代码注释，颜色可配置。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16080040-fa76fe2b1f2dfbdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="js注释"><br>
+<img src="https://upload-images.jianshu.io/upload_images/16080040-d8921f29420934f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css注释"></p>
+]]></content>
+      <categories>
+        <category>Vscode</category>
+      </categories>
+      <tags>
+        <tag>Vscode</tag>
+      </tags>
+  </entry>
+</search>
