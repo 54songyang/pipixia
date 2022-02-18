@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>前端面试题</title>
-    <url>/pipixia.github.io/2017/02/07/interview/</url>
+    <url>/pipixia/2017/02/07/interview/</url>
     <content><![CDATA[<h2 id="圣杯布局、双飞翼布局">圣杯布局、双飞翼布局</h2>
 <h2 id="line-height-如何继承">line-height 如何继承</h2>
 <ul>
@@ -98,8 +98,101 @@ vmax 取两者的最大值，vmin取两者的最小值</p>
       </tags>
   </entry>
   <entry>
+    <title>Vscode插件分享</title>
+    <url>/pipixia/2017/02/07/vscode/</url>
+    <content><![CDATA[<h1>1.<a href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments">Better Comments</a></h1>
+<blockquote>
+<p>编写更加人性化的注释</p>
+</blockquote>
+<h1>2.<a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer">Bracket Pair Colorizer</a></h1>
+<blockquote>
+<p>改变代码中的括号颜色,一层括号一个颜色，点击一个括号，会用实线将本身和另一半括号链接，便于区分。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16080040-12dda6b47488e52b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Bracket Pair Colorizer.jpg"></p>
+<h1>3.<a href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans">Chinese (Simplified) Language Pack for Visual Studio Code</a></h1>
+<blockquote>
+<p>Visual Studio Code汉化</p>
+</blockquote>
+<h1>4.<a href="https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek">CSS Peek</a></h1>
+<blockquote>
+<p>使用此插件，你可以追踪至样式表中 CSS 类和 ids 定义的地方。当你在 HTML 文件中右键单击选择器时，选择“ Go to Definition 和 Peek definition ”选项，它便会给你发送样式设置的 CSS 代码。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16080040-12f1b0bb76f731b4.gif?imageMogr2/auto-orient/strip" alt="css peek.gif"></p>
+<h1>5.<a href="https://marketplace.visualstudio.com/items?itemName=cipchk.cssrem">cssrem</a></h1>
+<blockquote>
+<p>css转rem插件，很方便，特别针对常写移动端适应布局。</p>
+</blockquote>
+<h1>6.<a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens — Git supercharged</a></h1>
+<blockquote>
+<p>git插件，不多说了。</p>
+</blockquote>
+<h1>7.<a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">HTML CSS Support</a></h1>
+<blockquote>
+<p>css提示，支持vue</p>
+</blockquote>
+<h1>8.<a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">Import Cost</a></h1>
+<blockquote>
+<p>显示引入包的文件大小。</p>
+</blockquote>
+<h1>9.<a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a></h1>
+<blockquote>
+<p>启动本地服务，必备</p>
+</blockquote>
+<h1>10.<a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">Path Intellisense</a></h1>
+<blockquote>
+<p>路径提示</p>
+</blockquote>
+<h1>11.<a href="https://marketplace.visualstudio.com/items?itemName=albert.TabOut">TabOut</a></h1>
+<blockquote>
+<p>tab键跳出括号，很实用</p>
+</blockquote>
+<h1>12.<a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur">Vetur</a></h1>
+<blockquote>
+<p>目前比较好的Vue语法高亮，vue项目必备插件</p>
+</blockquote>
+<h1>13.<a href="https://marketplace.visualstudio.com/items?itemName=mikey.vscode-fileheader">vscode-fileheader</a></h1>
+<blockquote>
+<p>添加作者详情插件。自动更新最后修改时间，最后修改人。配置后<br>
+<code>control+option+i</code>添加，适合多人开发的项目。</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">//用户配置
+"fileheader.Author": "author",
+"fileheader.LastModifiedBy": "author"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1>14.<a href="https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons">vscode-icons</a></h1>
+<blockquote>
+<p>文件图标美化。</p>
+</blockquote>
+<h1>15.<a href="https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap">htmltagwrap</a></h1>
+<blockquote>
+<p>html代码填充</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16080040-a152811435bb1a65.gif?imageMogr2/auto-orient/strip" alt="htmltagwrap.gif"></p>
+<h1>16.<a href="https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview">Image Preview</a></h1>
+<blockquote>
+<p>代码中选中图片路径即可预览图像</p>
+</blockquote>
+<h1>17.<a href="https://marketplace.visualstudio.com/items?itemName=gencer.html-slim-scss-css-class-completion">IntelliSense for CSS, SCSS class names in HTML, Slim and SCSS</a></h1>
+<blockquote>
+<p>把项目中 css 文件里的名称智能提示在 html 中</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16080040-46b02f45e981b3ec.gif?imageMogr2/auto-orient/strip" alt="IntelliSense for CSS, SCSS class names in HTML, Slim and SCSS.gif"></p>
+<h1>18.<a href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments">Better Comments</a></h1>
+<blockquote>
+<p>多色代码注释，颜色可配置。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16080040-fa76fe2b1f2dfbdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="js注释"><br>
+<img src="https://upload-images.jianshu.io/upload_images/16080040-d8921f29420934f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css注释"></p>
+]]></content>
+      <categories>
+        <category>Vscode</category>
+      </categories>
+      <tags>
+        <tag>Vscode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>viewer</title>
-    <url>/pipixia.github.io/2017/02/07/viewer/</url>
+    <url>/pipixia/2017/02/07/viewer/</url>
     <content><![CDATA[<h3 id="插件安装">插件安装</h3>
 <pre class="line-numbers language-none"><code class="language-none">npm install viewerjs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="插件引入">插件引入</h3>
@@ -590,99 +683,6 @@ viewer = new Viewer(image);<span aria-hidden="true" class="line-numbers-rows"><s
       </categories>
       <tags>
         <tag>viewer.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vscode插件分享</title>
-    <url>/pipixia.github.io/2017/02/07/vscode/</url>
-    <content><![CDATA[<h1>1.<a href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments">Better Comments</a></h1>
-<blockquote>
-<p>编写更加人性化的注释</p>
-</blockquote>
-<h1>2.<a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer">Bracket Pair Colorizer</a></h1>
-<blockquote>
-<p>改变代码中的括号颜色,一层括号一个颜色，点击一个括号，会用实线将本身和另一半括号链接，便于区分。</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/16080040-12dda6b47488e52b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Bracket Pair Colorizer.jpg"></p>
-<h1>3.<a href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans">Chinese (Simplified) Language Pack for Visual Studio Code</a></h1>
-<blockquote>
-<p>Visual Studio Code汉化</p>
-</blockquote>
-<h1>4.<a href="https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek">CSS Peek</a></h1>
-<blockquote>
-<p>使用此插件，你可以追踪至样式表中 CSS 类和 ids 定义的地方。当你在 HTML 文件中右键单击选择器时，选择“ Go to Definition 和 Peek definition ”选项，它便会给你发送样式设置的 CSS 代码。</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/16080040-12f1b0bb76f731b4.gif?imageMogr2/auto-orient/strip" alt="css peek.gif"></p>
-<h1>5.<a href="https://marketplace.visualstudio.com/items?itemName=cipchk.cssrem">cssrem</a></h1>
-<blockquote>
-<p>css转rem插件，很方便，特别针对常写移动端适应布局。</p>
-</blockquote>
-<h1>6.<a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens — Git supercharged</a></h1>
-<blockquote>
-<p>git插件，不多说了。</p>
-</blockquote>
-<h1>7.<a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">HTML CSS Support</a></h1>
-<blockquote>
-<p>css提示，支持vue</p>
-</blockquote>
-<h1>8.<a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">Import Cost</a></h1>
-<blockquote>
-<p>显示引入包的文件大小。</p>
-</blockquote>
-<h1>9.<a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a></h1>
-<blockquote>
-<p>启动本地服务，必备</p>
-</blockquote>
-<h1>10.<a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">Path Intellisense</a></h1>
-<blockquote>
-<p>路径提示</p>
-</blockquote>
-<h1>11.<a href="https://marketplace.visualstudio.com/items?itemName=albert.TabOut">TabOut</a></h1>
-<blockquote>
-<p>tab键跳出括号，很实用</p>
-</blockquote>
-<h1>12.<a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur">Vetur</a></h1>
-<blockquote>
-<p>目前比较好的Vue语法高亮，vue项目必备插件</p>
-</blockquote>
-<h1>13.<a href="https://marketplace.visualstudio.com/items?itemName=mikey.vscode-fileheader">vscode-fileheader</a></h1>
-<blockquote>
-<p>添加作者详情插件。自动更新最后修改时间，最后修改人。配置后<br>
-<code>control+option+i</code>添加，适合多人开发的项目。</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">//用户配置
-"fileheader.Author": "author",
-"fileheader.LastModifiedBy": "author"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h1>14.<a href="https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons">vscode-icons</a></h1>
-<blockquote>
-<p>文件图标美化。</p>
-</blockquote>
-<h1>15.<a href="https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap">htmltagwrap</a></h1>
-<blockquote>
-<p>html代码填充</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/16080040-a152811435bb1a65.gif?imageMogr2/auto-orient/strip" alt="htmltagwrap.gif"></p>
-<h1>16.<a href="https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview">Image Preview</a></h1>
-<blockquote>
-<p>代码中选中图片路径即可预览图像</p>
-</blockquote>
-<h1>17.<a href="https://marketplace.visualstudio.com/items?itemName=gencer.html-slim-scss-css-class-completion">IntelliSense for CSS, SCSS class names in HTML, Slim and SCSS</a></h1>
-<blockquote>
-<p>把项目中 css 文件里的名称智能提示在 html 中</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/16080040-46b02f45e981b3ec.gif?imageMogr2/auto-orient/strip" alt="IntelliSense for CSS, SCSS class names in HTML, Slim and SCSS.gif"></p>
-<h1>18.<a href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments">Better Comments</a></h1>
-<blockquote>
-<p>多色代码注释，颜色可配置。</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/16080040-fa76fe2b1f2dfbdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="js注释"><br>
-<img src="https://upload-images.jianshu.io/upload_images/16080040-d8921f29420934f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css注释"></p>
-]]></content>
-      <categories>
-        <category>Vscode</category>
-      </categories>
-      <tags>
-        <tag>Vscode</tag>
       </tags>
   </entry>
 </search>
