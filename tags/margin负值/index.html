@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端面试题, js css vue">
-    <meta name="description" content="前端面试题">
+    <meta name="keywords" content="标签: margin负值, js css vue">
+    <meta name="description" content="皮皮虾的个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>前端面试题 | 个人博客</title>
+    <title>标签: margin负值 | 个人博客</title>
     <link rel="icon" type="image/png" href="/pipixia/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/pipixia/libs/awesome/css/all.min.css">
@@ -105,7 +105,7 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>关于</span>
+      <span>关于我</span>
     </a>
     
   </li>
@@ -206,7 +206,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			关于
+			关于我
 		</a>
           
         </li>
@@ -308,597 +308,193 @@
 
 </header>
 
-    
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                皮皮虾
+                
+            </div>
 
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/pipixia/medias/banner/3.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">前端面试题</h1>
-                </div>
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                                "欢迎来到皮皮虾的个人空间",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
     </div>
 </div>
 
 
-
-
-<main class="post-container content">
-
-    
-    <link rel="stylesheet" href="/pipixia/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
-    <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/pipixia/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                <span class="chip bg-color">前端面试题</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/pipixia/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
-                                前端面试题
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="post-info">
-                
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2017-02-07
-                </div>
-                
-
-                
-
-                
-
-                
-
-                
-            </div>
-        </div>
-        <hr class="clearfix">
-
-        
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/pipixia/libs/prism/prism.css">
-        
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h2 id="圣杯布局、双飞翼布局">圣杯布局、双飞翼布局</h2>
-<h2 id="line-height-如何继承">line-height 如何继承</h2>
-<ul>
-<li>写具体数值，如30px,则继承该值；</li>
-<li>写比例，如2/15，则继承该比例；</li>
-<li>写百分比，如200%，则继承计算出来的值（考点）</li>
-</ul>
-<h2 id="响应式布局">响应式布局</h2>
-<ul>
-<li><strong>rem</strong>是什么
-<ul>
-<li>弊端 阶梯性</li>
-</ul>
-</li>
-<li><strong>vh</strong>、<strong>vw</strong></li>
-</ul>
-<h2 id="网页的视口尺寸">网页的视口尺寸</h2>
-<blockquote>
-<p>window.screen.height // 屏幕高度<br>
-window.innerHeight // 网页视口高度<br>
-document.body.clientHeight // body 高度</p>
-</blockquote>
-<p>vh 网页视口高度的 1/100<br>
-vw 网页视口高度的 1/100<br>
-vmax 取两者的最大值，vmin取两者的最小值</p>
-<h2 id="盒模型宽度计算">盒模型宽度计算</h2>
-<ul>
-<li>offsetWidth = (内容宽度 + 内边距 + 边框)，无外边框</li>
-<li>box-sizing:border-box</li>
-</ul>
-<h2 id="margin纵向重叠的问题">margin纵向重叠的问题</h2>
-<ul>
-<li>相邻元素的margin-top和margin-bottom会发生重叠</li>
-<li>空白内容的<code>&lt;p&gt;&lt;/p&gt;</code>也会重叠</li>
-</ul>
-<h2 id="margin负值问题">margin负值问题</h2>
-<ul>
-<li>margin-top、margin-left 负值，元素向上、向左移动</li>
-<li>margin-right负值，右侧元素左移，自身不受影响</li>
-<li>margin-bottom负值，下方元素上移，自身不受影响</li>
-</ul>
-<h2 id="BFC理解和应用">BFC理解和应用</h2>
-<ul>
-<li>一块独立渲染区域，内部元素的渲染不会影响边界以外的元素</li>
-<li>形成BFC的条件</li>
-<li>BFC的常见应用，清除浮动</li>
-</ul>
-<h2 id="float布局">float布局</h2>
-<ul>
-<li>圣杯布局和双飞翼布局的技术总结
-<ul>
-<li>使用float布局</li>
-<li>两侧使用margin负值，以便和中间内容横向重叠</li>
-<li>防止中间内容被两侧覆盖，一个用padding 一个用margin</li>
-</ul>
-</li>
-<li>手写clear fix<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.clearfix:after</span><span class="token punctuation">{</span>
-  <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">;</span>
-  <span class="token property">dispaly</span><span class="token punctuation">:</span>table<span class="token punctuation">;</span>
-  <span class="token property">clear</span><span class="token punctuation">:</span>both<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.clearfix</span><span class="token punctuation">{</span>
-  *<span class="token property">zoom</span><span class="token punctuation">:</span>1<span class="token punctuation">;</span> <span class="token comment">/* 兼容IE低版本 */</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<h2 id="flex布局">flex布局</h2>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* flex 画三个点的🎲 */</span>
-<span class="token selector">.box</span><span class="token punctuation">{</span>
-  <span class="token property">display</span><span class="token punctuation">:</span>flex<span class="token punctuation">;</span>
-  <span class="token property">justify-content</span><span class="token punctuation">:</span>space-between<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.item</span><span class="token punctuation">{</span>
-
-<span class="token punctuation">}</span>
-<span class="token selector">.item:nth-child(2)</span><span class="token punctuation">{</span>
-  <span class="token property">align-self</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">.item:nth-child(3)</span><span class="token punctuation">{</span>
-  <span class="token property">align-self</span><span class="token punctuation">:</span>flex-end<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="absolute和relative定位">absolute和relative定位</h2>
-<ul>
-<li>relative 依据自身定位</li>
-<li>absolute 依据最近一层的定位元素定位</li>
-</ul>
-
-                
-            </div>
-            <hr/>
-
-            
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/pipixia/about" rel="external nofollow noreferrer">皮皮虾</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="https://54songyang.github.io/pipixia/pipixia/2017/02/07/interview/">https://54songyang.github.io/pipixia/pipixia/2017/02/07/interview/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="/pipixia/about" target="_blank">皮皮虾</a>
-                    !
-                </span>
-            </div>
-        
-    </div>
-
-    <script async defer>
-        //复制后显示转载声明
-    //   document.addEventListener("copy", function (e) {
-    //     let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-    //     M.toast({html: toastHTML})
-    //   });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
-
-
-
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
-                            
-                                <a href="/pipixia/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                    <span class="chip bg-color">前端面试题</span>
-                                </a>
-                            
-                        </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/pipixia/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="qq,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/pipixia/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/pipixia/2017/02/07/interview/">
-                    <div class="card-image">
-                        
-                        <img src="/pipixia/medias/banner/3.jpg" class="responsive-img" alt="前端面试题">
-                        
-                        <span class="card-title">前端面试题</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            前端面试题
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2017-02-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/pipixia/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
-                                    前端面试题
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/pipixia/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                        <span class="chip bg-color">前端面试题</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/pipixia/2017/02/07/vscode/">
-                    <div class="card-image">
-                        
-                        <img src="/pipixia/medias/banner/2.jpg" class="responsive-img" alt="Vscode插件分享">
-                        
-                        <span class="card-title">Vscode插件分享</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Vscode插件分享
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2017-02-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/pipixia/categories/Vscode/" class="post-category">
-                                    Vscode
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/pipixia/tags/Vscode/">
-                        <span class="chip bg-color">Vscode</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-    </div>
-</article>
-
-</div>
-
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/pipixia/libs/codeBlock/codeBlockFuction.js"></script>
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/pipixia/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/pipixia/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/pipixia/libs/codeBlock/codeShrink.js"></script>
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/pipixia/libs/tocbot/tocbot.min.js"></script>
 <script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
+    // 每天切换 banner 图.  Switch banner image every day.
+    const sj = Math.floor(Math.random()*8)
+    var bannerUrl = "/pipixia/medias/banner/" + sj + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
+
+    </div>
+</div>
+
+<main class="content">
+
     
 
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/pipixia/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" title="前端面试题: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="前端面试题" style="background-color: #F9EBEA;">前端面试题
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/js/" title="js: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="js" style="background-color: #F5EEF8;">js
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/css/" title="css: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="css" style="background-color: #D5F5E3;">css
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/vue/" title="vue: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="vue" style="background-color: #E8F8F5;">vue
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/css%E5%B8%83%E5%B1%80/" title="css布局: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="css布局" style="background-color: #FEF9E7;">css布局
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/float/" title="float: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="float" style="background-color: #F8F9F9;">float
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/margin%E8%B4%9F%E5%80%BC/" title="margin负值: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="margin负值" style="background-color: #82E0AA;">margin负值
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/viewer-js/" title="viewer.js: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="viewer.js" style="background-color: #D7BDE2;">viewer.js
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/Vscode/" title="Vscode: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Vscode" style="background-color: #A3E4D7;">Vscode
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="css, css布局, float, margin负值" data-aos="fade-up">
+                <div class="card">
+                    <a href="/pipixia/2021/02/07/threecolumn/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/pipixia/medias/featureimages/2.jpg" class="responsive-img" alt="圣杯布局、双飞翼布局">
+                            
+                            <span class="card-title">圣杯布局、双飞翼布局</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/pipixia/categories/%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E3%80%81%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80/" class="post-category">
+                                圣杯布局、双飞翼布局
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
 
 
@@ -1243,6 +839,6 @@ $(function () {
     <script src="/pipixia/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/pipixia/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/pipixia/live2dw/assets/live2d-widget-model-z16/assets/z16.model.json"},"display":{"position":"right","width":200,"height":300,"hOffset":30,"vOffset":0},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+<script src="/pipixia/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/pipixia/live2dw/assets/live2d-widget-model-z16/assets/z16.model.json"},"display":{"position":"right","width":200,"height":300,"hOffset":80,"vOffset":0},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
 
 </html>

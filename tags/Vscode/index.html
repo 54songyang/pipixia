@@ -105,7 +105,7 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>关于</span>
+      <span>关于我</span>
     </a>
     
   </li>
@@ -206,7 +206,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			关于
+			关于我
 		</a>
           
         </li>
@@ -350,7 +350,8 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/pipixia/medias/banner/" + new Date().getDay() + '.jpg';
+    const sj = Math.floor(Math.random()*8)
+    var bannerUrl = "/pipixia/medias/banner/" + sj + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
@@ -380,10 +381,55 @@
                 </a>
                 
                 
-                <a href="/pipixia/tags/Vscode/" title="Vscode: 1">
+                <a href="/pipixia/tags/js/" title="js: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="Vscode" style="background-color: #F5EEF8;">Vscode
+                             chip-default "
+                            data-tagname="js" style="background-color: #F5EEF8;">js
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/css/" title="css: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="css" style="background-color: #D5F5E3;">css
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/vue/" title="vue: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="vue" style="background-color: #E8F8F5;">vue
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/css%E5%B8%83%E5%B1%80/" title="css布局: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="css布局" style="background-color: #FEF9E7;">css布局
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/float/" title="float: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="float" style="background-color: #F8F9F9;">float
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/margin%E8%B4%9F%E5%80%BC/" title="margin负值: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="margin负值" style="background-color: #82E0AA;">margin负值
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -392,7 +438,16 @@
                 <a href="/pipixia/tags/viewer-js/" title="viewer.js: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="viewer.js" style="background-color: #D5F5E3;">viewer.js
+                            data-tagname="viewer.js" style="background-color: #D7BDE2;">viewer.js
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/pipixia/tags/Vscode/" title="Vscode: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="Vscode" style="background-color: #A3E4D7;">Vscode
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -413,7 +468,7 @@
                     <a href="/pipixia/2017/02/07/vscode/">
                         <div class="card-image tag-image">
                             
-                            <img src="/pipixia/medias/banner/2.jpg" class="responsive-img" alt="Vscode插件分享">
+                            <img src="/pipixia/medias/banner/4.jpg" class="responsive-img" alt="Vscode插件分享">
                             
                             <span class="card-title">Vscode插件分享</span>
                         </div>
@@ -784,6 +839,6 @@ $(function () {
     <script src="/pipixia/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/pipixia/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/pipixia/live2dw/assets/live2d-widget-model-z16/assets/z16.model.json"},"display":{"position":"right","width":200,"height":300,"hOffset":30,"vOffset":0},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+<script src="/pipixia/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/pipixia/live2dw/assets/live2d-widget-model-z16/assets/z16.model.json"},"display":{"position":"right","width":200,"height":300,"hOffset":80,"vOffset":0},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
 
 </html>
