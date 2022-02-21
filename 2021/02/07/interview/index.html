@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>前端面试题 | 个人博客</title>
+    <title>前端面试题 | 皮皮虾</title>
     <link rel="icon" type="image/png" href="/pipixia/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/pipixia/libs/awesome/css/all.min.css">
@@ -47,7 +47,9 @@
                     
                     <!-- <img src="/pipixia/medias/logo.png" class="logo-img" alt="LOGO"> -->
                     
-                    <span class="logo-span">个人博客</span>
+                    <!-- <span class="logo-span">皮皮虾</span> -->
+                    <!-- 去掉标题显示 -->
+                    <span class="logo-span"></span>
                 </a>
             </div>
             
@@ -146,7 +148,7 @@
         
         <img src="/pipixia/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">个人博客</div>
+        <div class="logo-name">皮皮虾</div>
         <div class="logo-desc">
             
             皮皮虾的个人博客
@@ -439,14 +441,6 @@
                         
                             <a href="/pipixia/tags/js/">
                                 <span class="chip bg-color">js</span>
-                            </a>
-                        
-                            <a href="/pipixia/tags/css/">
-                                <span class="chip bg-color">css</span>
-                            </a>
-                        
-                            <a href="/pipixia/tags/vue/">
-                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -876,6 +870,33 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>网络请求，如ajax图片加载</li>
 <li>定时任务，如setTimeout</li>
 </ul>
+<h3 id="event-loop">event loop</h3>
+<ul>
+<li>js是单线程执行的</li>
+<li>异步要基于回调来实现</li>
+<li>event loop就是异步回调的实现原理</li>
+</ul>
+<h4 id="js如何执行">js如何执行</h4>
+<ul>
+<li>从前到后，一行一行执行</li>
+<li>如果某一行执行报错，则停止下面代码的执行</li>
+<li>先把同步代码执行完，再执行异步</li>
+</ul>
+<h4 id="event-loop过程">event loop过程</h4>
+<blockquote>
+<p><code>Call Stack</code><br>
+<code>Web APIs</code><br>
+<code>Event Loop</code><br>
+<code>Callback Queue</code></p>
+</blockquote>
+<ul>
+<li>同步代码，一行一行放在call stack执行</li>
+<li>遇到异步，会先“记录”下，等待时机（定时、网络请求等）</li>
+<li>时机到了，就移动到callback queue</li>
+<li>如call stack为空（即同步代码执行完）event loop开始工作</li>
+<li>轮训查找callback queue，如有则移动到call stack执行</li>
+<li>然后继续轮训查找</li>
+</ul>
 <h2 id="promise">promise</h2>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//手写promise加载图片</span>
 <span class="token keyword">function</span> <span class="token function">loadImg</span><span class="token punctuation">(</span><span class="token parameter">src</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -890,18 +911,51 @@ console<span class="token punctuation">.</span><span class="token function">log<
     img<span class="token punctuation">.</span>src <span class="token operator">=</span> src
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="event-loop">event loop</h2>
-<ul>
-<li>js是单线程执行的</li>
-<li>异步要基于回调来实现</li>
-<li>event loop就是异步回调的实现原理</li>
-</ul>
-<h3 id="js如何执行">js如何执行</h3>
-<ul>
-<li>从前到后，一行一行执行</li>
-<li>如果某一行执行报错，则停止下面代码的执行</li>
-<li>先把同步代码执行完，再执行异步</li>
-</ul>
+<h3 id="async-await-和Promise的关系">async/await 和Promise的关系</h3>
+<ol>
+<li>执行async函数，返回的是promise对象</li>
+</ol>
+  <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token number">100</span> <span class="token comment">// 相当于return Promise.resolve(100)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> rest1 <span class="token operator">=</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//执行 async函数，返回的是一个promise对象</span>
+<span class="token comment">// console.log('res1',res1) //promise对象</span>
+res1<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'data'</span><span class="token punctuation">,</span>data<span class="token punctuation">)</span> <span class="token comment">//100</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="2">
+<li>await 相当于promise的then</li>
+</ol>
+<blockquote>
+<p>async定义的函数内 await后面的代码，都可以看作是callback里的内容，即异步（微任务）</p>
+</blockquote>
+  <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">!</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> p1 <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> p1 <span class="token comment">//await 相当于 Promise then</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'data'</span><span class="token punctuation">,</span>data<span class="token punctuation">)</span> <span class="token comment">// 300</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token operator">!</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> data1 <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token number">400</span> <span class="token comment">//相当于await Promise.resolve(400)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'data1'</span><span class="token punctuation">,</span>data1<span class="token punctuation">)</span> <span class="token comment">// 400</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token operator">!</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> data2 <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'data2'</span><span class="token punctuation">,</span>data2<span class="token punctuation">)</span> <span class="token comment">// 200</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="3">
+<li><code>try...catch</code>可捕获异常，代替了promise的catch</li>
+</ol>
+  <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">!</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> p4 <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">'err'</span><span class="token punctuation">)</span> <span class="token comment">//rejected 状态</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> p4
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token comment">// try.catch 相当于 promise catch</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -975,14 +1029,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
                                     <span class="chip bg-color">js</span>
                                 </a>
                             
-                                <a href="/pipixia/tags/css/">
-                                    <span class="chip bg-color">css</span>
-                                </a>
-                            
-                                <a href="/pipixia/tags/vue/">
-                                    <span class="chip bg-color">vue</span>
-                                </a>
-                            
                         </div>
                     
                 </div>
@@ -1028,71 +1074,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/pipixia/2021/02/07/interview/">
-                    <div class="card-image">
-                        
-                        <img src="/pipixia/medias/featureimages/23.jpg" class="responsive-img" alt="前端面试题">
-                        
-                        <span class="card-title">前端面试题</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            前端面试题
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/pipixia/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
-                                    前端面试题
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/pipixia/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                        <span class="chip bg-color">前端面试题</span>
-                    </a>
-                    
-                    <a href="/pipixia/tags/js/">
-                        <span class="chip bg-color">js</span>
-                    </a>
-                    
-                    <a href="/pipixia/tags/css/">
-                        <span class="chip bg-color">css</span>
-                    </a>
-                    
-                    <a href="/pipixia/tags/vue/">
-                        <span class="chip bg-color">vue</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/pipixia/2021/02/07/threecolumn/">
                     <div class="card-image">
@@ -1109,9 +1093,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1127,12 +1111,12 @@ console<span class="token punctuation">.</span><span class="token function">log<
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/pipixia/tags/css/">
-                        <span class="chip bg-color">css</span>
-                    </a>
-                    
                     <a href="/pipixia/tags/css%E5%B8%83%E5%B1%80/">
                         <span class="chip bg-color">css布局</span>
+                    </a>
+                    
+                    <a href="/pipixia/tags/css/">
+                        <span class="chip bg-color">css</span>
                     </a>
                     
                     <a href="/pipixia/tags/float/">
@@ -1141,6 +1125,58 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     
                     <a href="/pipixia/tags/margin%E8%B4%9F%E5%80%BC/">
                         <span class="chip bg-color">margin负值</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/pipixia/2018/09/04/viewer/">
+                    <div class="card-image">
+                        
+                        <img src="/pipixia/medias/banner/2.jpg" class="responsive-img" alt="viewer.js">
+                        
+                        <span class="card-title">viewer.js</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            viewer
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/pipixia/categories/viewer/" class="post-category">
+                                    viewer
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/pipixia/tags/viewer/">
+                        <span class="chip bg-color">viewer</span>
+                    </a>
+                    
+                    <a href="/pipixia/tags/%E5%89%8D%E7%AB%AF%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88/">
+                        <span class="chip bg-color">前端图片预览</span>
                     </a>
                     
                 </div>
