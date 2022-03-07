@@ -898,7 +898,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>然后继续轮训查找</li>
 </ul>
 <h2 id="promise">promise</h2>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//手写promise加载图片</span>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//promise加载图片</span>
 <span class="token keyword">function</span> <span class="token function">loadImg</span><span class="token punctuation">(</span><span class="token parameter">src</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
     <span class="token keyword">const</span> img <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">creatElement</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span>
@@ -956,6 +956,42 @@ res1<span class="token punctuation">.</span><span class="token function">then</s
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token comment">// try.catch 相当于 promise catch</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="手写promise">手写promise</h3>
+<blockquote>
+<p>过程较为复杂，需要了解基本功能的实现过程，但不要求完全默写<br>
+promise/A+ 规范<br>
+参考该文章 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/183801144">https://zhuanlan.zhihu.com/p/183801144</a></p>
+</blockquote>
+<p><a href="/pipixia/2021/05/07/promise/">手写promise</a></p>
+<ol>
+<li>初始化异步调用</li>
+<li>then,catch链式调用</li>
+<li>API .resolve .reject .all .race</li>
+</ol>
+<h2 id="宏任务macroTask和微任务microTask">宏任务macroTask和微任务microTask</h2>
+<h3 id="什么是宏任务，什么是微任务">什么是宏任务，什么是微任务</h3>
+<ol>
+<li>宏任务：setTimeout，setInterval，Ajax，DOM事件</li>
+<li>微任务：Promise、async/await、MutationObserver、Object.observe、process.nextTick(Node.js 环境)</li>
+<li>微任务执行时机比宏任务要早</li>
+</ol>
+<h3 id="宏任务、微任务和DOM渲染，在event-loop的过程">宏任务、微任务和DOM渲染，在event loop的过程</h3>
+<blockquote>
+<p>为什么微任务比宏任务触发时机更早？</p>
+</blockquote>
+<ol>
+<li>每次call Stack空闲（即每次轮询结束）</li>
+<li>执行当前的微任务（micro task queue）</li>
+<li>DOM重新渲染，DOM结构如有改变则重新渲染</li>
+<li>然后再去触发下一次Event Loop</li>
+</ol>
+<h3 id="宏任务和微任务的区别">宏任务和微任务的区别</h3>
+<ol>
+<li>宏任务：DOM渲染后触发，如 setTimeout</li>
+<li>微任务：DOM渲染前触发，如 Promise</li>
+<li>微任务是ES6语法规定的</li>
+<li>宏任务是由浏览器规定的</li>
+</ol>
 
                 
             </div>
@@ -1078,6 +1114,62 @@ res1<span class="token punctuation">.</span><span class="token function">then</s
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/pipixia/2021/05/07/promise/">
+                    <div class="card-image">
+                        
+                        <img src="/pipixia/medias/featureimages/3.jpg" class="responsive-img" alt="手写promise">
+                        
+                        <span class="card-title">手写promise</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            手写promise
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-07
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/pipixia/categories/%E6%89%8B%E5%86%99promise/" class="post-category">
+                                    手写promise
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/pipixia/tags/js/">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                    <a href="/pipixia/tags/%E6%89%8B%E5%86%99promise/">
+                        <span class="chip bg-color">手写promise</span>
+                    </a>
+                    
+                    <a href="/pipixia/tags/promise/">
+                        <span class="chip bg-color">promise</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/pipixia/2021/02/07/threecolumn/">
                     <div class="card-image">
                         
@@ -1093,9 +1185,9 @@ res1<span class="token punctuation">.</span><span class="token function">then</s
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1125,58 +1217,6 @@ res1<span class="token punctuation">.</span><span class="token function">then</s
                     
                     <a href="/pipixia/tags/margin%E8%B4%9F%E5%80%BC/">
                         <span class="chip bg-color">margin负值</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/pipixia/2018/09/04/viewer/">
-                    <div class="card-image">
-                        
-                        <img src="/pipixia/medias/banner/2.jpg" class="responsive-img" alt="viewer.js">
-                        
-                        <span class="card-title">viewer.js</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            viewer
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/pipixia/categories/viewer/" class="post-category">
-                                    viewer
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/pipixia/tags/viewer/">
-                        <span class="chip bg-color">viewer</span>
-                    </a>
-                    
-                    <a href="/pipixia/tags/%E5%89%8D%E7%AB%AF%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88/">
-                        <span class="chip bg-color">前端图片预览</span>
                     </a>
                     
                 </div>

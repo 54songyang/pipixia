@@ -507,7 +507,7 @@ reject: rejected</li>
 <li>同一个promise对象下面的then方法是可以被调用多次的</li>
 <li>then方法是可以被链式调用的, 后面then方法的回调函数拿到值的是上一个then方法的回调函数的返回值</li>
 </ol>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">onst MyPromise <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./myPromise'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> MyPromise <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./myPromise'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">p1</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MyPromise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -526,7 +526,7 @@ reject: rejected</li>
 <span class="token function">p2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">value</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">reason</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>reason<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="具体实现-2">具体实现</h2>
+<h2 id="具体实现">具体实现</h2>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> <span class="token constant">PENDING</span> <span class="token operator">=</span> <span class="token string">'pending'</span><span class="token punctuation">;</span> <span class="token comment">// 等待</span>
 <span class="token keyword">const</span> <span class="token constant">FULFILLED</span> <span class="token operator">=</span> <span class="token string">'fulfilled'</span><span class="token punctuation">;</span> <span class="token comment">// 成功</span>
 <span class="token keyword">const</span> <span class="token constant">REJECTED</span> <span class="token operator">=</span> <span class="token string">'rejected'</span><span class="token punctuation">;</span> <span class="token comment">// 失败</span>
@@ -877,18 +877,18 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/pipixia/2021/02/07/threecolumn/">
+                <a href="/pipixia/2021/02/07/interview/">
                     <div class="card-image">
                         
-                        <img src="/pipixia/medias/featureimages/2.jpg" class="responsive-img" alt="圣杯布局、双飞翼布局">
+                        <img src="/pipixia/medias/featureimages/23.jpg" class="responsive-img" alt="前端面试题">
                         
-                        <span class="card-title">圣杯布局、双飞翼布局</span>
+                        <span class="card-title">前端面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            圣杯布局、双飞翼布局
+                            前端面试题
                         
                     </div>
                     <div class="publish-info">
@@ -899,8 +899,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/pipixia/categories/%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E3%80%81%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80/" class="post-category">
-                                    圣杯布局、双飞翼布局
+                            <a href="/pipixia/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
+                                    前端面试题
                                 </a>
                             
                             
@@ -910,20 +910,12 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/pipixia/tags/css%E5%B8%83%E5%B1%80/">
-                        <span class="chip bg-color">css布局</span>
+                    <a href="/pipixia/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">前端面试题</span>
                     </a>
                     
-                    <a href="/pipixia/tags/css/">
-                        <span class="chip bg-color">css</span>
-                    </a>
-                    
-                    <a href="/pipixia/tags/float/">
-                        <span class="chip bg-color">float</span>
-                    </a>
-                    
-                    <a href="/pipixia/tags/margin%E8%B4%9F%E5%80%BC/">
-                        <span class="chip bg-color">margin负值</span>
+                    <a href="/pipixia/tags/js/">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
                 </div>
